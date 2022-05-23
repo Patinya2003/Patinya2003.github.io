@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- นายปฏิญญา พวงยิ้มน้อย -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-JS-Cal-Number.html</title>
+</head>
+<body>
+    Input Number : <input type="text" name="num1" id="num1" style="width: 50px;">
+    <br><br>
+    Input Number : <input type="text" name="num2" id="num2" style="width: 50px;">
+    <br><br>
+    <button style="width: 30px;" onclick="sum()">+</button>
+    <button style="width: 30px;" onclick="minus()">-</button>
+    <button style="width: 30px;" onclick="multiply()">*</button>
+    <button style="width: 30px;" onclick="devide()">/</button>
+    <br><br>
+    Ans = <span id="output"></span>
+
+    <script>
+        let n1 = 0
+        let n2 = 0
+        let ans = 0
+
+        function start() {
+            n1 = Number(document.getElementById('num1').value)
+            n2 = Number(document.getElementById('num2').value)
+        }
+        
+        function sum() {
+            start()
+            ans = n1 + n2
+            document.getElementById('output').innerHTML = ans
+        }
+
+        function minus() {
+            start()
+            ans = n1 - n2
+            document.getElementById('output').innerHTML = ans
+        }
+
+        function multiply() {
+            start()
+            ans = n1 * n2
+            document.getElementById('output').innerHTML = ans
+        }
+
+        function devide() {
+            start()
+            ans = n1 / n2
+            document.getElementById('output').innerHTML = ans
+        }
+    </script>
+
+</body>
+</html>
