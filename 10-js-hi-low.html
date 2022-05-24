@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- นายปฏิญญา พวงยิ้มน้อย -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-JS-Hi-Low.html</title>
+</head>
+<body>
+    Input Number : <input type="text" name="" id="num1">
+    <br><br>
+    <button onclick="hi_low()">Submit</button>
+    <br><br>
+    <p id="output"></p>
+
+    <script>
+        function hi_low() {
+            if (Number(document.getElementById('num1').value) < 50) {
+                document.getElementById('output').innerHTML = 'LOW'
+            } else {
+                document.getElementById('output').innerHTML = 'High'
+            }
+        }
+        
+    </script>
+</body>
+</html>

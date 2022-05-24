@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- นาย ปฏิญญา พวงยิ้มน้อย -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-js-array-car.html</title>
+    <script>
+        let car = ['Toyota','Isuzu','Mazda','Ford','Bmw','Benz']
+    </script>
+</head>
+<body>
+    <script>
+        // document.write(car[0] + '<br>')
+        // document.write(car[1] + '<br>')
+        // document.write(car[2] + '<br>')
+
+        // ดึงข้อมูลจาก Arrays โดยใช้ For
+        // for (let i = 0; i < car.length; i++) {
+        //     document.write(car[i] + '<br>')
+        // }
+
+        // ดึงข้อมูลจาก Arrays โดยใช้ While
+        // let i = 0
+        // while (i < car.length) {
+        //     document.write(car[i] + '<br>')
+        //     i++
+        // }
+
+        // ดึงข้อมูลจาก Arrays โดยใช้ For in
+        // for (let i in car) {
+        //     document.write(car[i] + '<br>')
+        // }
+
+        car[6] = 'Honda'
+        car[7] = 'Nissan'
+        car.pop()
+        car.push('Lambo')
+        car.shift()
+        car.unshift('Volvo')
+        // delete car[2]
+        car.sort()
+        car.reverse()
+        // ดึงข้อมูลจาก Arrays โดยใช้ For of
+        for (let i of car) {
+            document.write(i + '<br>')
+        }
+    </script>
+</body>
+</html>
