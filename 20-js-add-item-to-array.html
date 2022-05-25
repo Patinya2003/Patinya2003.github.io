@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- นายปฏิญญา พวงยิ้มน้อย -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20-js-add-item-to-array.html</title>
+    <Script>
+        let sid = [10001]
+        let fname = ['ปฏิญญา']
+        let lname = ['พวงยิ้มน้อย']
+    </Script>
+</head>
+<body>
+    <div style="text-align: center;">
+        บันทึกข้อมูลนักเรียน
+        <br><br>
+        <table border="1" style="border-collapse:collapse; 
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;">
+            <tr>
+                <td style="text-align: right;">รหัส :</td>
+                <td><input type="text" name="" id="sid"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">ชื่อ :</td>
+                <td><input type="text" name="" id="fname"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">นามสกุล :</td>
+                <td><input type="text" name="" id="lname"></td>
+            </tr>
+        </table>
+        <br>
+        <button onclick="input_data()">บันทึก</button>
+        <br><br>
+        <table border="1" style="border-collapse: collapse;
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;">
+            <tr>
+                <th>รหัส</th>
+                <th>ชื่อ</th>
+                <th>นามสกุล</th>
+            </tr>
+            <script>
+                for (let i = 0; i < sid.length; i ++) {
+                    document.write('<tr>')
+                        document.write('<td style="text-align: center;">' + sid[i] + '</td>')
+                        document.write('<td style="text-align: center;">' + fname[i] + '</td>')
+                        document.write('<td style="text-align: center;">' + lname[i] + '</td>')
+                    document.write('</tr>')
+                }
+
+                function input_data() {
+                    sid.push(document.getElementById('sid').value)
+                    fname.push(document.getElementById('fname').value)
+                    lname.push(document.getElementById('lname').value)
+                    for (let i = 0; i < sid.length; i ++) {
+                    document.write('<tr>')
+                        document.write('<td style="text-align: center;">' + sid[i] + '</td>')
+                        document.write('<td style="text-align: center;">' + fname[i] + '</td>')
+                        document.write('<td style="text-align: center;">' + lname[i] + '</td>')
+                    document.write('</tr>')
+                }
+                }
+                
+            </script>
+        </table>
+    </div>
+</body>
+</html>
